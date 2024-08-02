@@ -1,6 +1,8 @@
 # ledB
-some more info at [yair.cc/ledB](http://yair.cc/ledB)
+## Sound to LED module.  
+works nicely on sub-bass frequencies, but realy depends on how you build it and on what you place it on. 
 
-![fritzing](https://user-images.githubusercontent.com/222526/189472643-cc94bcfd-bac1-4cd1-84c4-5aeebe58eee7.png)
 
-![circuit_gerber_v1](https://user-images.githubusercontent.com/222526/189472616-7448ed1f-f5bc-4d13-9755-709dab069b3c.png)
+### updates
+mid 2023 eran re-designed the cirecuit in kicad - [eran's fork](https://github.com/dodomarg/LED-B). i grabbed his changes. 
+
