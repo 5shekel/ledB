@@ -77,29 +77,29 @@
         )
       )
     )
-    (symbol "Amplifier_Operational:LM741" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 0 6.35 0)
+    (symbol "Amplifier_Operational:LMV321" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "LM741" (at 0 3.81 0)
+      (property "Value" "LMV321" (at 0 -5.08 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 1.27 1.27 0)
-        (effects (font (size 1.27 1.27)) hide)
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
       )
-      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm741.pdf" (at 3.81 3.81 0)
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmv324.pdf" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "single opamp" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Operational Amplifier, DIP-8/TO-99-8" (at 0 0 0)
+      (property "ki_description" "Low-Voltage Rail-to-Rail Output Operational Amplifiers, SOT-23-5/SC-70-5" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TSSOP*3x3mm*P0.65mm*" (at 0 0 0)
+      (property "ki_fp_filters" "SOT?23* *SC*70*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "LM741_0_1"
+      (symbol "LMV321_0_1"
         (polyline
           (pts
             (xy -5.08 5.08)
@@ -110,39 +110,27 @@
           (stroke (width 0.254) (type default))
           (fill (type background))
         )
+        (pin power_in line (at -2.54 -7.62 90) (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at -2.54 7.62 270) (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
       )
-      (symbol "LM741_1_1"
-        (pin input line (at 0 -7.62 90) (length 5.08)
-          (name "NULL" (effects (font (size 0.508 0.508))))
+      (symbol "LMV321_1_1"
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
         (pin input line (at -7.62 -2.54 0) (length 2.54)
           (name "-" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -7.62 2.54 0) (length 2.54)
-          (name "+" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -2.54 -7.62 90) (length 3.81)
-          (name "V-" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 2.54 -7.62 90) (length 6.35)
-          (name "NULL" (effects (font (size 0.508 0.508))))
-          (number "5" (effects (font (size 1.27 1.27))))
         )
         (pin output line (at 7.62 0 180) (length 2.54)
           (name "~" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -2.54 7.62 270) (length 3.81)
-          (name "V+" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin no_connect line (at 0 2.54 270) (length 2.54) hide
-          (name "NC" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -445,6 +433,9 @@
   (junction (at 119.38 110.49) (diameter 0) (color 0 0 0 0)
     (uuid 73b1f34e-e8b6-469e-8b7f-ba79e3be24f4)
   )
+  (junction (at 152.4 100.33) (diameter 0) (color 0 0 0 0)
+    (uuid 89bad1bd-52f8-4675-ac1b-9feb8db438dc)
+  )
   (junction (at 97.155 97.79) (diameter 0) (color 0 0 0 0)
     (uuid a4215020-0b68-43c1-9042-1fe7d077b5d1)
   )
@@ -476,6 +467,14 @@
     (stroke (width 0) (type default))
     (uuid 56037693-1f7b-494f-8a67-06f097034bba)
   )
+  (wire (pts (xy 165.1 95.25) (xy 165.1 100.33))
+    (stroke (width 0) (type default))
+    (uuid 643a3bbf-1d42-4cf9-ac7c-16f4f5b7a060)
+  )
+  (wire (pts (xy 119.38 110.49) (xy 119.38 113.03))
+    (stroke (width 0) (type default))
+    (uuid 6d60694e-7405-4f2a-83b2-d428e1300f38)
+  )
   (wire (pts (xy 119.38 78.74) (xy 119.38 80.01))
     (stroke (width 0) (type default))
     (uuid 6fd176a2-d810-4d5f-9c0e-93e067947c35)
@@ -504,7 +503,7 @@
     (stroke (width 0) (type default))
     (uuid 93727637-9e4d-4c2c-bddc-d3ae8730f4c8)
   )
-  (wire (pts (xy 152.4 106.68) (xy 152.4 110.49))
+  (wire (pts (xy 152.4 109.22) (xy 152.4 110.49))
     (stroke (width 0) (type default))
     (uuid 941ea249-02ce-44c6-9456-9b2bd08820a3)
   )
@@ -519,6 +518,10 @@
   (wire (pts (xy 133.35 78.74) (xy 133.35 82.55))
     (stroke (width 0) (type default))
     (uuid 9b813b07-9dd0-47e8-a203-6d1d5eac1b02)
+  )
+  (wire (pts (xy 152.4 100.33) (xy 157.48 100.33))
+    (stroke (width 0) (type default))
+    (uuid 9dca63b8-1cb6-4abf-bcb7-9099a699d632)
   )
   (wire (pts (xy 152.4 69.85) (xy 152.4 90.17))
     (stroke (width 0) (type default))
@@ -544,12 +547,20 @@
     (stroke (width 0) (type default))
     (uuid c545ad5c-ae3f-4ef7-b176-ca763fa47b36)
   )
+  (wire (pts (xy 152.4 100.33) (xy 152.4 99.06))
+    (stroke (width 0) (type default))
+    (uuid d09e7758-8039-4b0c-b9a3-a3200b0a15ab)
+  )
   (wire (pts (xy 202.565 125.095) (xy 202.565 127.635))
     (stroke (width 0) (type default))
     (uuid e1f9366b-9430-4d86-9ecd-6427813ab7a1)
   )
+  (wire (pts (xy 152.4 101.6) (xy 152.4 100.33))
+    (stroke (width 0) (type default))
+    (uuid e4e80585-918f-467f-8ecd-8b1c287cb276)
+  )
 
-  (text "comment by uwe \n(home-made 2024)\n" (at 209.55 106.68 0)
+  (text "comment by uwe \n(home-made 2024)\n" (at 194.31 115.57 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3e369ca7-3333-4c5c-9019-b7a3f1923ef2)
   )
@@ -557,8 +568,13 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 505d92ab-b202-4a58-a60e-22bdd23aa8a7)
   )
-  (text "optional current limit resistor\nimportant if adding LDR\ndistrotion will be much better\n\nall resistors, same value (higher then 1M) \nif we use a Rail to Rail CMOS \n(LMV358 MCP6001 TLC271 LMV321) \n\nif running above 3v, wewill need to adjust the volt devider R3\nvolt of pin3 must be lower then 2v (led opens)\n\nlimitations:\nBLUE led will possibly not work with the ressitor\nlithium recommded for high volt LEDs"
-    (at 173.99 99.695 0)
+  (text "(optional) go on output as well\njust reversed to pickup the reversed volt from piezo"
+    (at 163.83 105.41 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 5cf35f6f-f36c-4da9-8c85-24c0d80675bc)
+  )
+  (text "all resistors same value (higher then 1M) \nwe use a Rail to Rail CMOS \n(LMV358 MCP6001 TLC271 LMV321) \n\nR4 - optional current limit resistor\nimportant if adding LDR\ndistrotion will be much better\n\nif running above 3v, we will need to adjust the volt devider R3\nvolt of pin3 must be lower then 2v (led opens)\n\nlimitations:\nBLUE led will possibly not work with the resistor\nlithium recommded for high volt LEDs"
+    (at 170.18 90.17 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5e08b7c9-88b2-4084-ae74-dde0524ba1be)
   )
@@ -572,7 +588,7 @@
     (property "Value" "10M" (at 120.65 103.505 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 117.602 100.33 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 117.602 100.33 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 119.38 100.33 0)
@@ -581,7 +597,7 @@
     (pin "1" (uuid cc2bd69a-1a97-4e88-af86-1f126cfad40f))
     (pin "2" (uuid cd1347b4-6e96-40d9-9a3b-a8422f4f3be1))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "R1") (unit 1)
         )
@@ -598,7 +614,7 @@
     (property "Value" "10M" (at 121.285 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 117.602 83.82 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 117.602 83.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 119.38 83.82 0)
@@ -607,7 +623,7 @@
     (pin "1" (uuid 76d18121-c56d-48ad-b0e6-e03e9c5f94c8))
     (pin "2" (uuid 73496697-f67d-4a45-95d4-23760b535675))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "R3") (unit 1)
         )
@@ -624,7 +640,7 @@
     (property "Value" "220" (at 154.94 96.52 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 150.622 95.25 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 150.622 95.25 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 152.4 95.25 0)
@@ -633,7 +649,7 @@
     (pin "1" (uuid 06428af4-0068-42fc-b25f-fe2799f95138))
     (pin "2" (uuid 66edcf24-b5e3-4af0-bd85-8c4046e24440))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "R4") (unit 1)
         )
@@ -658,7 +674,7 @@
     )
     (pin "1" (uuid 9da99d96-9f15-4adc-9618-8049eff14d35))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR04") (unit 1)
         )
@@ -683,9 +699,35 @@
     )
     (pin "1" (uuid f735c94d-7f18-4e0b-b852-00bc6595f474))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 161.29 100.33 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 41ef37fd-d65f-4d54-bf49-95d28d904c73)
+    (property "Reference" "D3" (at 158.115 98.425 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 161.925 103.505 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 161.29 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 161.29 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2f1516e9-2f02-469a-8fe4-54a79ab72f8d))
+    (pin "2" (uuid a5450d2a-4bb1-411e-84ee-bac1503b80e6))
+    (instances
+      (project "ledB"
+        (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -709,7 +751,7 @@
     (pin "1" (uuid 3a7c05a1-5925-4ed7-8b77-cfe4f2221ead))
     (pin "2" (uuid b89a5bea-bc09-4771-8a5d-f0704b62817f))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "D2") (unit 1)
         )
@@ -717,25 +759,25 @@
     )
   )
 
-  (symbol (lib_id "Device:LED") (at 152.4 102.87 90) (unit 1)
+  (symbol (lib_id "Device:LED") (at 152.4 105.41 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4ce4f4b8-2469-4ce5-8c7e-f732332837bf)
-    (property "Reference" "D1" (at 149.225 100.33 90)
+    (property "Reference" "D1" (at 149.225 102.87 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "LED" (at 156.21 105.7275 90)
+    (property "Value" "LED" (at 156.21 108.2675 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "LED_THT:LED_D3.0mm" (at 152.4 102.87 0)
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 152.4 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 152.4 102.87 0)
+    (property "Datasheet" "~" (at 152.4 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 892cfb4f-3958-475b-894d-809422ebc0d2))
     (pin "2" (uuid 91bd6dad-1304-4a6d-929c-d028f3e3646d))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "D1") (unit 1)
         )
@@ -761,9 +803,34 @@
     (pin "1" (uuid ed5e62bd-27f0-4a62-8015-5ddc69f061af))
     (pin "2" (uuid a3c57dd1-1a57-4ca6-b23a-d29a901d07e3))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "Y1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 119.38 113.03 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 96830113-08ce-41b5-99ef-858f363d33b4)
+    (property "Reference" "#PWR08" (at 119.38 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 119.38 118.11 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 119.38 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 119.38 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 07fe1c3b-14cc-4d52-8b5e-cb41cde110e2))
+    (instances
+      (project "ledB"
+        (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -786,41 +853,9 @@
     )
     (pin "1" (uuid db33fbe2-fc80-4ece-b39c-c474c94b2e0c))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR03") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Amplifier_Operational:LM741") (at 135.89 90.17 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a562df62-0f81-495e-8c3d-2e4630dc79fc)
-    (property "Reference" "U1" (at 130.175 83.185 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "OPAMP" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 137.16 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm741.pdf" (at 139.7 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid fd2bdcf8-c7c4-46bd-8915-1a5ef88b9c03))
-    (pin "2" (uuid 7d997c7b-b6db-4d1d-919b-36c2d22f344f))
-    (pin "3" (uuid f8823f12-65ed-4d5c-bdd4-2e33d5ee5afe))
-    (pin "4" (uuid a889790f-46b7-4788-bea5-0704820c967b))
-    (pin "5" (uuid e4306a86-74b0-4111-95f5-2e408c4930c2))
-    (pin "6" (uuid 4ca3f6da-6d69-419d-a65c-e28148585d8b))
-    (pin "7" (uuid 656e448b-a128-4047-b8fe-16191066dd5b))
-    (pin "8" (uuid 1d0fd886-8635-460f-b711-a5ecb4eaa403))
-    (instances
-      (project "LED-B"
-        (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
-          (reference "U1") (unit 1)
         )
       )
     )
@@ -843,9 +878,34 @@
     )
     (pin "1" (uuid a6166a0c-b39d-45ee-af97-96969bc21bbc))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC") (at 165.1 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid aee54dbf-680d-414b-a415-e9dcbd36cd7a)
+    (property "Reference" "#PWR07" (at 165.1 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC" (at 165.1 90.17 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 165.1 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 165.1 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 34795d47-aaaa-4d4b-90b4-bafbb1994653))
+    (instances
+      (project "ledB"
+        (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -868,7 +928,7 @@
     )
     (pin "1" (uuid a2abc540-666c-43d3-9bce-4eee39a61950))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR02") (unit 1)
         )
@@ -885,7 +945,7 @@
     (property "Value" "Battery Cell" (at 90.17 95.25 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "1_my_custom_lib:BAT_BH800S" (at 97.155 92.456 90)
+    (property "Footprint" "Connector_Wire:SolderWire-2.5sqmm_1x02_P7.2mm_D2.4mm_OD3.6mm" (at 97.155 92.456 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 97.155 92.456 90)
@@ -894,7 +954,7 @@
     (pin "1" (uuid f7db8fe2-78c9-48c6-82ae-36d5ecc60ef9))
     (pin "2" (uuid ea73c02d-8df6-4a9c-b590-4a90f704fc6c))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "BT1") (unit 1)
         )
@@ -911,7 +971,7 @@
     (property "Value" "10M" (at 109.855 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 107.442 85.09 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 107.442 85.09 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 109.22 85.09 0)
@@ -920,7 +980,7 @@
     (pin "1" (uuid 17135d26-cf8f-41d4-9d06-a50ba3ab3290))
     (pin "2" (uuid ff407153-bde5-4fc6-a678-642da9021c72))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "R2") (unit 1)
         )
@@ -945,9 +1005,38 @@
     )
     (pin "1" (uuid 97ff299e-3b4c-48d6-8f5f-5d664008a4b7))
     (instances
-      (project "LED-B"
+      (project "ledB"
         (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
           (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Amplifier_Operational:LMV321") (at 135.89 90.17 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid fab58aab-d774-42fa-a733-84dfe26fe3a4)
+    (property "Reference" "U1" (at 130.81 82.55 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LMV321" (at 139.7 95.25 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" (at 135.89 90.17 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmv324.pdf" (at 135.89 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "2" (uuid 7919d14c-9f5c-45dd-8236-6879890e1c5f))
+    (pin "5" (uuid 09044542-794e-433a-8e4b-2de0f1c5accb))
+    (pin "1" (uuid 99b1c1a6-e71d-4784-a342-db5330a4d268))
+    (pin "3" (uuid ac0a9cdc-2749-4267-b72f-8cd83f46d1ff))
+    (pin "4" (uuid 26dd4bc2-317e-4ac7-ac46-cdbf751ac90d))
+    (instances
+      (project "ledB"
+        (path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
+          (reference "U1") (unit 1)
         )
       )
     )
