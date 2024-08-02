@@ -6,3 +6,6 @@ works nicely on sub-bass frequencies, but realy depends on how you build it and 
 ### updates
 mid 2023 eran re-designed the cirecuit in kicad - [eran's fork](https://github.com/dodomarg/LED-B). i grabbed his changes. 
 
+this is a version with ommited 10K resistor, which we found is not needed
+
+![](print-ledB.svg)
