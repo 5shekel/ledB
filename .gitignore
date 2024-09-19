@@ -3,3 +3,4 @@ ledB-cache.lib
 *.lck
 ledB/ledB-backups/*
 ledB/#auto_saved_files#
+*/*.kicad_prl
