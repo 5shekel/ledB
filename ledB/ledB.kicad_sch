@@ -353,31 +353,34 @@
 				)
 			)
 		)
-		(symbol "Connector:TestPoint"
+		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 5.08 0 0)
+				(at 0.9652 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -386,15 +389,6 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
 				(at 0 0 0)
 				(effects
 					(font
@@ -403,7 +397,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "test point tp"
+			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -412,7 +406,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Pin* Test*"
+			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -421,12 +415,34 @@
 					(hide yes)
 				)
 			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
 					(stroke
-						(width 0)
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -434,11 +450,11 @@
 					)
 				)
 			)
-			(symbol "TestPoint_1_1"
+			(symbol "C_1_1"
 				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -446,6 +462,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1213,6 +1247,12 @@
 		)
 	)
 	(junction
+		(at 127 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13cf1873-f59f-4ef1-bb03-e932d98a31a9")
+	)
+	(junction
 		(at 109.22 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1237,10 +1277,16 @@
 		(uuid "73b1f34e-e8b6-469e-8b7f-ba79e3be24f4")
 	)
 	(junction
-		(at 152.4 100.33)
+		(at 109.22 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "89bad1bd-52f8-4675-ac1b-9feb8db438dc")
+		(uuid "76617e35-05ad-4829-9ecf-720a86fa94ba")
+	)
+	(junction
+		(at 127 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "912c9ebe-a752-4fa2-8ae5-8cfa20b2dc81")
 	)
 	(junction
 		(at 97.155 97.79)
@@ -1249,16 +1295,20 @@
 		(uuid "a4215020-0b68-43c1-9042-1fe7d077b5d1")
 	)
 	(junction
-		(at 146.05 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e14658be-8e49-4f42-8c47-a2165329c61f")
-	)
-	(junction
 		(at 133.35 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f720aad3-6734-4647-9c6f-7389b31005b7")
+	)
+	(wire
+		(pts
+			(xy 127 87.63) (xy 128.27 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dd0b6bc-2e8c-4358-866e-809c941ee4a6")
 	)
 	(wire
 		(pts
@@ -1272,7 +1322,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 90.17) (xy 146.05 90.17)
+			(xy 143.51 90.17) (xy 152.4 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1302,6 +1352,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 104.14) (xy 127 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "552fab57-ebf5-4db1-87eb-f5e35b1efcbb")
+	)
+	(wire
+		(pts
 			(xy 152.4 90.17) (xy 152.4 91.44)
 		)
 		(stroke
@@ -1309,16 +1369,6 @@
 			(type default)
 		)
 		(uuid "56037693-1f7b-494f-8a67-06f097034bba")
-	)
-	(wire
-		(pts
-			(xy 165.1 95.25) (xy 165.1 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "643a3bbf-1d42-4cf9-ac7c-16f4f5b7a060")
 	)
 	(wire
 		(pts
@@ -1352,7 +1402,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 88.9) (xy 109.22 92.71)
+			(xy 109.22 87.63) (xy 109.22 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1362,7 +1412,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 87.63) (xy 128.27 87.63)
+			(xy 119.38 87.63) (xy 127 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1379,16 +1429,6 @@
 			(type default)
 		)
 		(uuid "7b572923-f50c-4794-bfce-bb98efb0dad9")
-	)
-	(wire
-		(pts
-			(xy 146.05 85.09) (xy 146.05 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ebc94f3-f34a-4598-a0c7-0a3e3dc374c2")
 	)
 	(wire
 		(pts
@@ -1409,6 +1449,16 @@
 			(type default)
 		)
 		(uuid "8b254b6e-12e6-43cd-983f-2e3a6b872644")
+	)
+	(wire
+		(pts
+			(xy 127 87.63) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b78a57b-daa8-4517-8695-5d105414b37b")
 	)
 	(wire
 		(pts
@@ -1442,7 +1492,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 69.85) (xy 109.22 81.28)
+			(xy 109.22 69.85) (xy 109.22 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1459,16 +1509,6 @@
 			(type default)
 		)
 		(uuid "9b813b07-9dd0-47e8-a203-6d1d5eac1b02")
-	)
-	(wire
-		(pts
-			(xy 152.4 100.33) (xy 157.48 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dca63b8-1cb6-4abf-bcb7-9099a699d632")
 	)
 	(wire
 		(pts
@@ -1492,7 +1532,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 110.49) (xy 133.35 110.49)
+			(xy 119.38 110.49) (xy 127 110.49)
 		)
 		(stroke
 			(width 0)
@@ -1532,13 +1572,13 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 100.33) (xy 152.4 99.06)
+			(xy 127 110.49) (xy 133.35 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d09e7758-8039-4b0c-b9a3-a3200b0a15ab")
+		(uuid "cb79fe43-598b-4998-8cab-dfdceb0f5c00")
 	)
 	(wire
 		(pts
@@ -1552,23 +1592,23 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 90.17) (xy 152.4 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e224125c-3ad6-420d-9caf-dcba592febc2")
-	)
-	(wire
-		(pts
-			(xy 152.4 101.6) (xy 152.4 100.33)
+			(xy 152.4 99.06) (xy 152.4 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e4e80585-918f-467f-8ecd-8b1c287cb276")
+	)
+	(wire
+		(pts
+			(xy 109.22 80.01) (xy 109.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8091d8d-20b1-4aa3-8c16-9cc1ec2ae9f5")
 	)
 	(text "comment by uwe \n(home-made 2024)\n"
 		(exclude_from_sim no)
@@ -1592,17 +1632,6 @@
 		)
 		(uuid "505d92ab-b202-4a58-a60e-22bdd23aa8a7")
 	)
-	(text "(optional) go on output as well\njust reversed to pickup the reversed volt from piezo"
-		(exclude_from_sim no)
-		(at 163.83 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5cf35f6f-f36c-4da9-8c85-24c0d80675bc")
-	)
 	(text "all resistors same value (higher then 1M) \nwe use a Rail to Rail CMOS \n(LMV358 MCP6001 TLC271 LMV321) \n\nR4 - optional current limit resistor\nimportant if adding LDR\ndistrotion will be much better\n\nif running above 3v, we will need to adjust the volt devider R3\nvolt of pin3 must be lower then 2v (led opens)\n\nlimitations:\nBLUE led will possibly not work with the resistor\nlithium recommded for high volt LEDs"
 		(exclude_from_sim no)
 		(at 170.18 90.17 0)
@@ -1616,6 +1645,7 @@
 	)
 	(label "piezo+"
 		(at 109.22 101.6 90)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1642,7 +1672,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10M"
+		(property "Value" "2M2"
 			(at 120.65 103.505 0)
 			(effects
 				(font
@@ -1711,7 +1741,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10M"
+		(property "Value" "3M3"
 			(at 121.285 86.36 0)
 			(effects
 				(font
@@ -1958,73 +1988,6 @@
 			(project "ledB"
 				(path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 161.29 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp no)
-		(uuid "41ef37fd-d65f-4d54-bf49-95d28d904c73")
-		(property "Reference" "D3"
-			(at 158.115 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 161.925 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 161.29 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 161.29 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2f1516e9-2f02-469a-8fe4-54a79ab72f8d")
-		)
-		(pin "2"
-			(uuid "a5450d2a-4bb1-411e-84ee-bac1503b80e6")
-		)
-		(instances
-			(project "ledB"
-				(path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -2498,17 +2461,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 165.1 95.25 0)
+		(lib_id "Device:C")
+		(at 127 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aee54dbf-680d-414b-a415-e9dcbd36cd7a")
-		(property "Reference" "#PWR07"
-			(at 165.1 99.06 0)
+		(uuid "b4801347-92b4-4a9f-93a9-214eed300272")
+		(property "Reference" "C1"
+			(at 124.206 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47n"
+			(at 128.524 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 127.9652 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2516,16 +2496,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 165.1 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 95.25 0)
+		(property "Datasheet" "~"
+			(at 127 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2533,17 +2505,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 165.1 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 95.25 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2552,12 +2515,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "34795d47-aaaa-4d4b-90b4-bafbb1994653")
+			(uuid "9fa972e2-8ade-4c33-bfaa-6f9c561b1baf")
+		)
+		(pin "2"
+			(uuid "1d23d4f2-0c88-4f61-800b-ff50bfc8c67c")
 		)
 		(instances
-			(project "ledB"
+			(project ""
 				(path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
-					(reference "#PWR07")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -2700,7 +2666,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 85.09 0)
+		(at 109.22 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2708,7 +2674,7 @@
 		(dnp no)
 		(uuid "cb97cffa-d6af-4d13-8d0b-5b430f56a81a")
 		(property "Reference" "R2"
-			(at 106.045 81.28 0)
+			(at 106.045 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2716,8 +2682,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10M"
-			(at 109.855 88.9 0)
+		(property "Value" "3M3"
+			(at 109.855 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2726,7 +2692,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 107.442 85.09 90)
+			(at 107.442 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2735,7 +2701,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 85.09 0)
+			(at 109.22 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2744,7 +2710,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.22 85.09 0)
+			(at 109.22 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2905,72 +2871,6 @@
 			(project "ledB"
 				(path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 146.05 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ff461c5c-e718-4b73-a119-821568377683")
-		(property "Reference" "TP1"
-			(at 146.812 84.074 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 138.43 79.248 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 151.13 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 146.05 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "70893b0b-31f6-478a-9a22-13268f6833dc")
-		)
-		(instances
-			(project ""
-				(path "/f6109518-4bca-410c-8b3d-75fba4ae25d8"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
